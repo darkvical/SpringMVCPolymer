@@ -1,0 +1,24 @@
+{
+  "name": "polymer",
+  "authors": [
+    "darkvical <vical.rl@gmail.com>"
+  ],
+  "description": "proyecto con polymer",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.5.0",
+    "vaadin-grid": "vaadin/vaadin-grid#3c37785",
+    "vaadin-combo-box": "^1.1.0",
+    "app-layout": "PolymerElements/app-layout#^0.9.1"
+  }
+}

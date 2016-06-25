@@ -1,0 +1,71 @@
+<link rel="import" href="../js/bower_components/polymer/polymer.html">
+<link rel="import" href="../js/bower_components/vaadin-combo-box/vaadin-combo-box.html">
+<link rel="import" href="../js/bower_components/paper-button/paper-button.html">
+<link rel="import" href="../js/bower_components/app-layout/app-toolbar/app-toolbar.html">
+
+<dom-module id="ficha-cliente">
+
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 16px;
+      }
+      paper-button.custom {
+        --paper-button-ink-color: var(--paper-pink-a200);
+        --paper-button-flat-keyboard-focus: {
+          background-color: var(--paper-pink-a200);
+          color: white !important;
+        };
+        --paper-button-raised-keyboard-focus: {
+          background-color: var(--paper-pink-a200) !important;
+          color: white !important;
+        };
+      }
+      paper-button.custom:hover {
+        background-color: var(--paper-indigo-100);
+      }
+      paper-button.indigo {
+        background-color: var(--paper-indigo-500);
+        color: white;
+        --paper-button-raised-keyboard-focus: {
+          background-color: var(--paper-pink-a200) !important;
+          color: white !important;
+        };
+      }
+      app-toolbar.toolbar{
+      	background-color: blue !important;
+      }
+    </style>
+    <app-toolbar class="toolbar">
+<!-- 	  <paper-icon-button icon="menu"></paper-icon-button> -->
+	  <div title>PIC - Ficha cliente</div>
+<!-- 	  <paper-icon-button icon="search"></paper-icon-button> -->
+	</app-toolbar>
+    <div>
+	   	<vaadin-combo-box id="cmbDocumento" label="Documento"></vaadin-combo-box>
+	    <paper-button raised class="custom indigo">Buscar</paper-button>
+	    <span class="nombre">{{nombre}}</span>
+	    <span class="paterno">{{paterno}}</span>
+	    <span class="materno">{{materno}}</span>
+    </div>
+    
+  </template>
+
+  <!-- Creates the element's prototype and registers it -->
+  <script>
+    Polymer({
+      is: 'ficha-cliente',
+      properties: {
+        route: Object,
+        nombre: String,
+        paterno: String,
+        materno: String
+      },
+      ready: function(){
+      }
+    });
+  </script>
+
+</dom-module>
